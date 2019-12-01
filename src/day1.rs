@@ -1,8 +1,16 @@
-pub fn get_fuel(mass: i32) -> i32 {
+pub fn part1(input: &[i32]) -> i32 {
+    input.iter().map(|n| get_fuel(n.to_owned())).sum()
+}
+
+pub fn part2(input: &[i32]) -> i32 {
+    input.iter().map(|n| get_fuel_recursive(n.to_owned())).sum()
+}
+
+fn get_fuel(mass: i32) -> i32 {
     (((mass as f32) / 3.0_f32).floor() - 2.0_f32) as i32
 }
 
-pub fn get_fuel_recursive(mass: i32) -> i32 {
+fn get_fuel_recursive(mass: i32) -> i32 {
     let mut fuel = get_fuel(mass);
     if fuel > 0 {
         fuel += get_fuel_recursive(fuel);

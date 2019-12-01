@@ -3,7 +3,6 @@ use std::env;
 mod day1;
 mod utils;
 
-use day1::*;
 use utils::read_i32_from_file;
 
 fn main() {
@@ -23,10 +22,8 @@ fn run_day(day: &str, input: &str) {
     match day {
         "day1" => {
             let input: Vec<i32> = read_i32_from_file(input);
-            let part1: i32 = input.iter().map(|n| get_fuel(n.to_owned())).sum();
-            println!("Part 1: {}", part1);
-            let part2: i32 = input.iter().map(|n| get_fuel_recursive(n.to_owned())).sum();
-            println!("Part 2: {}", part2);
+            println!("Part 1: {}", day1::part1(&input));
+            println!("Part 2: {}", day1::part2(&input));
         }
         _ => println!("Invalid day. Insert day in the form dayX"),
     }
