@@ -11,13 +11,12 @@ fn get_fuel(mass: i32) -> i32 {
 }
 
 fn get_fuel_recursive(mass: i32) -> i32 {
-    let mut fuel = get_fuel(mass);
+    let fuel = get_fuel(mass);
     if fuel > 0 {
-        fuel += get_fuel_recursive(fuel);
+        fuel + get_fuel_recursive(fuel)
     } else {
-        fuel = 0;
+        0
     }
-    fuel
 }
 
 #[cfg(test)]
