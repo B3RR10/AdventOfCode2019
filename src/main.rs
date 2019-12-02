@@ -1,9 +1,8 @@
 use std::env;
 
 mod day1;
+mod day2;
 mod utils;
-
-use utils::read_i32_from_file;
 
 fn main() {
     let args: Vec<_> = env::args().collect();
@@ -21,9 +20,14 @@ fn main() {
 fn run_day(day: &str, input: &str) {
     match day {
         "day1" => {
-            let input: Vec<i32> = read_i32_from_file(input);
+            let input: Vec<i32> = utils::read_int_from_file(input, '\n');
             println!("Part 1: {}", day1::part1(&input));
             println!("Part 2: {}", day1::part2(&input));
+        }
+        "day2" => {
+            let input: Vec<i32> = utils::read_int_from_file(input, ',');
+            println!("Part 1: {}", day2::part1(&input));
+            println!("Part 2: {}", day2::part2(&input));
         }
         _ => println!("Invalid day. Insert day in the form dayX"),
     }
