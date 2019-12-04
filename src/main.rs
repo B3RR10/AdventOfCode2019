@@ -2,6 +2,7 @@ use std::env;
 
 mod day1;
 mod day2;
+mod day3;
 mod utils;
 
 fn main() {
@@ -28,6 +29,10 @@ fn run_day(day: &str, input: &str) {
             let input: Vec<i32> = utils::read_int_from_file(input, ',');
             println!("Part 1: {}", day2::part1(&input));
             println!("Part 2: {}", day2::part2(&input));
+        }
+        "day3" => {
+            let input: Vec<String> = utils::read_lines(input);
+            println!("Part 1: {}", day3::part1(&input));
         }
         _ => println!("Invalid day. Insert day in the form dayX"),
     }
