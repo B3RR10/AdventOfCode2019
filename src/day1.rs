@@ -24,49 +24,49 @@ mod tests {
     use super::*;
 
     #[test]
-    fn fuel_for_12_test() {
+    fn part1_1_test() {
         let input = 12;
         let expected = 2;
         assert_eq!(expected, get_fuel(input));
     }
 
     #[test]
-    fn fuel_for_14_test() {
+    fn part1_2_test() {
         let input = 14;
         let expected = 2;
         assert_eq!(expected, get_fuel(input));
     }
 
     #[test]
-    fn fuel_for_1969_test() {
+    fn part1_3_test() {
         let input = 1969;
         let expected = 654;
         assert_eq!(expected, get_fuel(input));
     }
 
     #[test]
-    fn fuel_for_100756_test() {
+    fn part1_4_test() {
         let input = 100756;
         let expected = 33583;
         assert_eq!(expected, get_fuel(input));
     }
 
     #[test]
-    fn fuel_recurse_for_14_test() {
+    fn part2_1_test() {
         let input = 12;
         let expected = 2;
         assert_eq!(expected, get_fuel_recursive(input));
     }
 
     #[test]
-    fn fuel_recurse_for_1969_test() {
+    fn part2_2_test() {
         let input = 1969;
         let expected = 966;
         assert_eq!(expected, get_fuel_recursive(input));
     }
 
     #[test]
-    fn fuel_recurse_for_100756_test() {
+    fn part2_3_test() {
         let input = 100756;
         let expected = 50346;
         assert_eq!(expected, get_fuel_recursive(input));
