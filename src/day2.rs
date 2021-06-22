@@ -4,11 +4,11 @@ pub fn part1(input: &[i32]) -> i32 {
 }
 
 pub fn part2(input: &[i32]) -> i32 {
-    let searched_ouptut = 19690720;
+    let searched_ouptut = 19_690_720;
 
     for i in 0..100 {
         for j in 0..100 {
-            let mod_input = modifiy_input(input.clone().to_vec(), i, j);
+            let mod_input = modifiy_input(input.to_vec(), i, j);
             if run_intcode(mod_input)[0] == searched_ouptut {
                 return i * 100 + j;
             }

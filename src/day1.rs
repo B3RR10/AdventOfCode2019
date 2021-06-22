@@ -47,7 +47,7 @@ mod tests {
 
     #[test]
     fn fuel_for_100756_test() {
-        let input = 100756;
+        let input = 100_756;
         let expected = 33583;
         assert_eq!(expected, get_fuel(input));
     }
@@ -68,7 +68,7 @@ mod tests {
 
     #[test]
     fn fuel_recurse_for_100756_test() {
-        let input = 100756;
+        let input = 100_756;
         let expected = 50346;
         assert_eq!(expected, get_fuel_recursive(input));
     }
